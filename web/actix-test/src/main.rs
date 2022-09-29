@@ -1,8 +1,5 @@
-use actix_web::{HttpServer, App};
+use actix_web::{App, HttpServer};
 
 fn main() {
-    HttpServer::new(|| {
-        App::new()
-            .route("/")
-    });
+    HttpServer::new(|| App::new().route("/"));
 }

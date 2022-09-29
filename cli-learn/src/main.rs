@@ -1,5 +1,13 @@
 use clap::Parser;
 
+// struct example
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
 fn main() {
     // Too Complicated
     // struct Cli {
@@ -12,4 +20,21 @@ fn main() {
     //     pattern,
     //     path: std::path::PathBuf::from(path),
     // };
+    let mut user_1 = User {
+        active: true,
+        username: String::from("foo"),
+        email: String::from("bar"),
+        sign_in_count: 4,
+    };
+
+    let user_2 = User {
+        active: false,
+        ..user_1
+    };
+
+    // Tuple Struct
+
+    struct Cli {
+        pattern: String,
+    }
 }
